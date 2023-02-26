@@ -1,0 +1,304 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+/* start components */
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-title h1 {
+  padding: 10px 20px;
+  border: 2px solid var(--green-color);
+  color: rgb(51, 209, 204, 0.6);
+  position: relative;
+  /* when you applied something on h1 it takes 0.3s  */
+  transition: 0.3s;
+  z-index: 2;
+}
+.main-title h1:hover {
+  color: white;
+  border: 2px solid white;
+  /* when I hover the hover will applied only after 0.5s  */
+  transition-delay: 0.5s;
+}
+.main-title h1::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--green-color);
+  border-radius: 50%;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title h1::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--green-color);
+  border-radius: 50%;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-title h1:hover::after {
+  z-index: -1;
+  /* forwards mean stay at the last state of the animation  (at 100%) */
+  animation: move-right 0.5s linear forwards;
+}
+.main-title h1:hover::before {
+  z-index: -1;
+  animation: move-left 0.5s linear forwards;
+}
+@keyframes move-left {
+  50% {
+    left: 0;
+  }
+  100% {
+    /* you have to write left 0 another time cause if you don't
+    write it the element will backwards to -25px */
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2196f3;
+  }
+}
+@keyframes move-right {
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--green-color);
+    border-radius: 0;
+  }
+}
+/* end components */
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  background-color: #eee;
+}
+.header {
+  margin-bottom: 10px;
+}
+.cards {
+  padding-top: 50px;
+  display: flex;
+}
+
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 991px) {
+  .navbar .navbar-collapse {
+    background-color: rgba(25, 40, 63, 0.4);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0px;
+    padding-left: 15px;
+  }
+}
+
+.navbar {
+  background-color: #19283f !important;
+}
+.nav-item a.nav-link {
+  color: white;
+  font-size: 18px;
+}
+.navbar .nav-item {
+  color: white;
+}
+.main-btn {
+  background-color: var(--red-color) !important;
+  color: var(--yellow-color) !important;
+  padding: 0.5rem 1rem;
+}
+.navbar ul li:first-of-type .active,
+.navbar ul li a:hover {
+  color: #33d1cc !important;
+}
+
+li .search {
+  height: 40px;
+  border-radius: 8px;
+  align-self: center;
+  padding-left: 20px;
+  outline-style: none;
+}
+.fa-magnifying-glass {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 10px;
+  align-self: center;
+  cursor: pointer;
+}
+.fa-magnifying-glass:hover {
+  color: #33d1cc;
+}
+@media (max-width: 991px) {
+  li .search {
+    display: none;
+  }
+  .fa-magnifying-glass {
+    display: none;
+  }
+}
+
+/* coursel */
+.carousel-item img {
+  height: calc(100vh - 75px);
+}
+@media (max-width: 591px) {
+  .carousel-item img {
+    height: 300px;
+  }
+}
+/* cards */
+body {
+  background-color: var(--dark-color);
+}
+.cards {
+  gap: 10px;
+}
+.cards .btn {
+  margin: 0 auto;
+  display: block;
+  background-color: var(--green-color);
+  border: none;
+  transition: 0.5s;
+}
+.cards .btn:hover {
+  background-color: var(--red-color);
+}
+.container .card .img {
+  background-color: #eee;
+  position: relative;
+}
+.container .card .img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.container.cards .card:hover .img::before {
+  width: 0;
+  height: 0;
+}
+.container.cards card img {
+  border: 1px solid var(--yellow-color);
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .container.cards {
+    flex-flow: column nowrap;
+    width: 100%;
+    gap: 15px;
+  }
+  .container .card {
+    flex-flow: row nowrap;
+    width: 100%;
+  }
+  .container .card .img {
+    width: 100%;
+  }
+}
+@media (max-width: 567px) {
+  .container .card {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+  .container .card .img {
+    width: 100%;
+  }
+}
+/* start team  */
+.main-title {
+  margin-bottom: 100px;
+}
+.team {
+  padding-top: 100px;
+}
+.team .container {
+  display: flex;
+  gap: 50px;
+}
+.team .card {
+  width: 30%;
+  padding-top: 20px;
+  position: relative;
+}
+.team .card img {
+  border: 3px solid rgb(255, 49, 80);
+  width: 80px;
+  position: absolute;
+  left: -20px;
+  top: -40px;
+}
+@media (max-width: 767px) {
+  .team {
+    display: none;
+  }
+}
+
+/* footer */
+.footer {
+  padding-top: 100px;
+}
+.footer .row {
+  margin-left: 50px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+@media (max-width: 591px) {
+  .footer .row {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .footer .row .icons {
+    padding-bottom: 20px;
+    order: 12;
+  }
+}
+.footer .frame {
+  display: block;
+}
+.footer .row .social {
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+  margin-left: 15px;
+  height: 50px;
+  border-bottom: 1px solid #33d1cc;
+  width: fit-content;
+}
+.footer .row .icons {
+  padding-top: 40px;
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+.footer .row i {
+  font-size: 20px;
+}
+iframe {
+  width: 100%;
+}

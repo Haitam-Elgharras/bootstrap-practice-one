@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap classes-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-RvrzlwJKdBn0v1/WG46eE04g+V7muJXoGmkz7xOZlCzZkrWQ0xc1wYOwE1bbm+L0"
+      crossorigin="anonymous"
+    />
+    <!-- icons bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/all.min.js"></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- start nav  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#" media
+          ><img class="rounded-circle" src="media/newLogo.jpg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars" style="color: white"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          style="background-color: rgba(25, 40, 63, 0.4)"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active p-3 pe-3" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-3 pe-3" aria-current="page" href="#"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-3 pe-3" aria-current="page" href="#"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link p-3 pe-3" aria-current="page" href="#"
+                >Contacts</a
+              >
+            </li>
+
+            <li class="d-flex">
+              <input
+                class="search rounded-pill"
+                type="text"
+                placeholder="search"
+              />
+            </li>
+            <li class="d-flex"><i class="fa-solid fa-magnifying-glass"></i></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- start carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="media/back33.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="media/back222.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="media/back333.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- start cards  -->
+    <div class="main-title mb-4" style="padding-top: 70px">
+      <h1>OUR CARDS</h1>
+    </div>
+    <div class="cards container d-flex pt-5">
+      <div class="card">
+        <div class="img">
+          <div class="img rounded-circle">
+            <img src="media/gallery-05.jpg" class="card-img-top" alt="..." />
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="media/gallery-06.png" class="card-img-top" alt="..." />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="media/gallery-01.png" class="card-img-top" alt="..." />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="img">
+          <img src="media/gallery-02.png" class="card-img-top" alt="..." />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <!-- start team  -->
+    <div class="team">
+      <div class="main-title">
+        <h1>OUR TEAM</h1>
+      </div>
+      <div class="container">
+        <div class="card">
+          <img
+            src="media/1675018968651.jpg"
+            class="card-img-top rounded-circle"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text" style="font-size: 20px">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="media/1675018968651.jpg"
+            class="card-img-top rounded-circle"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text" style="font-size: 20px">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="media/1675018968651.jpg"
+            class="card-img-top rounded-circle"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text" style="font-size: 20px">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="main-title" style="margin-bottom: 50px">
+        <h1>CONTACT US</h1>
+      </div>
+      <div class="container">
+        <div
+          class="row justify-content-center text-center align-items-center flex-wrap"
+        >
+          <div
+            class="icons d-flex flex-direction-column justify-content-center text-center align-items-center col-md-4 col-lg-6 col-sm-5"
+          >
+            <div class="social">WE ARE SOCIAL</div>
+            <div class="box">
+              <i
+                class="fa-regular fa-envelope ms-3"
+                style="width: fit-content; color: white; cursor: pointer"
+              ></i>
+              <i
+                class="fa-brands fa-facebook-f ms-3"
+                style="width: fit-content; color: white; cursor: pointer"
+              ></i>
+              <i
+                class="fa-brands fa-twitter ms-3"
+                style="width: fit-content; color: white; cursor: pointer"
+              >
+              </i>
+              <i
+                class="fa-brands fa-linkedin-in ms-3"
+                style="width: fit-content; color: white; cursor: pointer"
+              ></i>
+              <i
+                class="fa-solid fa-house ms-3"
+                style="width: fit-content; color: white; cursor: pointer"
+              ></i>
+            </div>
+          </div>
+          <div class="frame col-md-8 col-lg-6 col-sm-7 mt-5">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13276.660376582622!2d-7.3604533!3d33.7046767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7b6d0db170185%3A0x79759da1a916fc50!2sENSET%20Mohammedia!5e0!3m2!1sfr!2sma!4v1677346927414!5m2!1sfr!2sma"
+              width="600"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
